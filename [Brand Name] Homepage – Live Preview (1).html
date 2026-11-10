@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cloud Backup &amp; Disaster Recovery UK | [Brand Name]</title>
+<meta name="description" content="Cloud backup and disaster recovery services for UK businesses. Explore Microsoft 365 backup, cloud replication and tailored data protection solutions.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>/* ==========================================================================
+   [Brand Name] design system. Shared by every page.
+   1 Tokens  2 Base  3 Buttons  4 Header + mega menu  5 3D cloud  6 Cards
+   7 Page sections  8 Footer  9 Reveal  10 Responsive  11 Reduced motion
+   ========================================================================== */
+/* 1 Tokens */
+:root{--white:#fff;--sky:#EEF5FC;--lav:#EFEEFB;--aqua:#E6F4F3;--blue:#2F6BE8;--blue-d:#2457C9;--navy:#14284B;--ink:#22344D;--grey:#586882;--teal:#58AFA8;--tx:#17706B;--line:#D9E4F0;--yellow:#FFC83D;--r:28px;--sh:0 30px 50px -28px rgba(20,40,75,.38);--font:Manrope,system-ui,-apple-system,"Segoe UI",sans-serif}
+/* 2 Base */
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{margin:0;font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none}h1,h2,h3{margin:0;line-height:1.1;letter-spacing:-.03em;color:var(--navy)}
+img,svg{max-width:100%}:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}section{padding:110px 0;position:relative}
+.eyebrow{display:inline-block;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--tx);margin-bottom:14px}
+h2{font-size:clamp(30px,4vw,48px);font-weight:800}.lead{color:var(--grey);font-size:18px;max-width:560px;margin:0}
+.sec-head{max-width:760px;margin-bottom:56px}.sec-head .lead{margin-top:18px}.center{text-align:center}.center.sec-head{margin-inline:auto}
+.skip{position:absolute;left:-999px}.skip:focus{left:16px;top:16px;z-index:99;background:#fff;padding:10px 16px;border-radius:10px}
+/* 3 Buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:999px;font:700 15px var(--font);border:2px solid transparent;cursor:pointer;transition:transform .3s,box-shadow .3s,border-color .3s,background .3s}
+.btn-p{background:var(--blue);color:#fff;box-shadow:0 10px 24px -10px var(--blue)}.btn-p:hover{transform:translateY(-3px);box-shadow:0 16px 28px -10px var(--blue)}
+.btn-s{background:#fff;border-color:var(--line);color:var(--navy)}.btn-s:hover{border-color:var(--blue);transform:translateY(-3px)}
+.btn-y{background:var(--yellow);color:var(--navy);box-shadow:0 14px 28px -12px rgba(255,200,61,.7)}.btn-y:hover{transform:translateY(-3px)}
+.btn-o{border-color:rgba(255,255,255,.5);color:#fff}.btn-o:hover{background:rgba(255,255,255,.1);transform:translateY(-3px)}
+.ctas{display:flex;flex-wrap:wrap;gap:14px}
+/* 4 Header + mega menu */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.88);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}.site-header.sc{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:18px;height:80px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:21px;color:var(--navy);white-space:nowrap}
+.logo i{width:34px;height:34px;border-radius:12px 12px 12px 4px;background:linear-gradient(135deg,var(--blue),var(--teal))}
+.menu{display:flex;align-items:center;gap:24px;list-style:none;margin:0;padding:0;font-weight:600;font-size:15px}
+.menu>li>a,.dd-btn{position:relative;padding:6px 0;background:none;border:0;font:inherit;color:inherit;cursor:pointer}
+.menu>li>a:after,.dd-btn:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:var(--tx);transition:width .3s}
+.menu>li>a:hover:after,.dd-btn:hover:after,.dd.open .dd-btn:after,.menu a[aria-current]:after{width:100%}
+.dd-btn{display:inline-flex;align-items:center;gap:6px}.dd-btn svg{transition:transform .3s}.dd.open .dd-btn svg{transform:rotate(180deg)}
+.nav-cta{padding:13px 22px;font-size:14px;white-space:nowrap}.menu .m-cta{display:none}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer;color:var(--navy)}.burger span{display:block;width:24px;height:2px;background:currentColor;margin:6px auto;transition:.3s}
+.nav{position:relative}.dd{position:static}
+.mega{position:absolute;left:24px;right:24px;top:100%;padding-top:10px;opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .3s,transform .3s,visibility .3s;z-index:60}
+.mega-in{display:grid;grid-template-columns:1.2fr 1fr .9fr;gap:8px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:18px;box-shadow:0 40px 70px -30px rgba(20,40,75,.45)}
+.dd.open .mega{opacity:1;visibility:visible;transform:none}
+.mega-col{padding:18px;border-radius:20px}.mega-col:nth-child(1){background:linear-gradient(160deg,var(--sky),#fff)}.mega-col:nth-child(2){background:linear-gradient(160deg,var(--lav),#fff)}.mega-col:nth-child(3){background:linear-gradient(160deg,var(--aqua),#fff)}
+.mega h3{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tx);font-weight:800;margin:0 0 12px;padding-bottom:10px;border-bottom:2px solid var(--line)}
+.mega ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}.mega a{display:block;padding:9px 12px;border-radius:12px;font-weight:600;font-size:15px;transition:background .2s,color .2s,padding .2s}
+.mega a:hover,.mega a:focus-visible{background:rgba(47,107,232,.1);color:var(--blue-d);padding-left:16px}
+/* 5 3D cloud (HTML: .stage > .blob + .scene > .tilt > .cloud; JS adds depth layers) */
+.stage{position:relative;font-size:clamp(10px,1.5vw,17px);width:30em;height:28em;max-width:100%;margin-left:auto}
+.blob{position:absolute;inset:0;background:linear-gradient(160deg,var(--sky),var(--lav) 55%,var(--aqua));border-radius:58% 42% 52% 48%/48% 56% 44% 52%;animation:morph 14s ease-in-out infinite}
+@keyframes morph{50%{border-radius:42% 58% 46% 54%/56% 44% 56% 44%}}
+.scene{position:absolute;inset:0;perspective:70em}.tilt{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .5s ease-out}
+.cloud{position:absolute;left:3em;top:5em;width:24em;height:15em;transform-style:preserve-3d;animation:cfloat 8s ease-in-out infinite}
+@keyframes cfloat{0%,100%{transform:rotateX(14deg) rotateY(-20deg) translateY(0)}50%{transform:rotateX(9deg) rotateY(-9deg) translateY(-1.4em)}}
+.layer{position:absolute;inset:0;transform:translateZ(var(--z,0));filter:brightness(var(--b,1)) saturate(1.25)}
+.puff{position:absolute;border-radius:50%;background:radial-gradient(circle at 34% 26%,#fff 0,#eaf2ff 40%,#b7cffa 100%)}
+.puff.base{left:0;top:6em;width:24em;height:9em;border-radius:4.5em}.p1{left:2.5em;top:3.5em;width:9em;height:9em}.p2{left:7em;top:0;width:11em;height:11em}.p3{left:14em;top:3em;width:8em;height:8em}
+.layer.front .puff{box-shadow:inset -.9em -1.2em 2em rgba(47,107,232,.28),inset .8em .9em 1.4em rgba(255,255,255,.95)}
+.badge{position:absolute;left:8.5em;top:3.6em;width:7em;transform:translateZ(5em);filter:drop-shadow(0 1.2em 1em rgba(20,40,75,.35))}
+.badge.back{transform:translateZ(4.3em);filter:brightness(.62) saturate(1.2)}
+.ring{position:absolute;left:0;top:3em;width:30em;height:30em;border:2px dashed rgba(47,107,232,.4);border-radius:50%;transform:rotateX(74deg);animation:ringspin 30s linear infinite}
+.ring:after{content:"";position:absolute;left:50%;top:-.6em;width:1.2em;height:1.2em;margin-left:-.6em;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,var(--blue))}
+@keyframes ringspin{from{transform:rotateX(74deg) rotateZ(0)}to{transform:rotateX(74deg) rotateZ(360deg)}}
+.shadow{position:absolute;left:5em;bottom:2.4em;width:20em;height:2.6em;border-radius:50%;background:radial-gradient(rgba(20,40,75,.3),transparent 70%);animation:sh 8s ease-in-out infinite}
+@keyframes sh{50%{transform:scale(.82);opacity:.7}}
+.chip{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:13px;box-shadow:0 20px 40px -18px rgba(20,40,75,.4);animation:float 6s ease-in-out infinite;white-space:nowrap}
+.chip b{width:30px;height:30px;border-radius:10px;background:var(--aqua);display:grid;place-items:center;color:var(--tx)}
+.c1{top:6%;left:-4%}.c2{bottom:24%;right:-3%;animation-delay:-2s}.c3{bottom:4%;left:6%;animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-12px)}}
+/* 6 Cards (single-select group: [data-select]) */
+.card{background:linear-gradient(160deg,#fff 40%,var(--lav));border:2px solid transparent;border-radius:var(--r);padding:36px;position:relative;overflow:hidden;transition:transform .4s,box-shadow .4s,background .4s,color .4s,border-color .4s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--sh);border-color:#c9d6f7}
+.card h3{font-size:28px;margin-bottom:12px}.card p{color:var(--grey);margin:0 0 16px;max-width:430px;position:relative}.card .num{display:block;font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--tx);margin-bottom:12px}
+.pick{all:unset;cursor:pointer}.pick:focus-visible{outline:3px solid var(--blue);outline-offset:6px;border-radius:6px}.pick:after{content:"";position:absolute;inset:0}
+.more{position:relative;z-index:2;display:inline-block;font-weight:800;color:var(--blue-d);transition:transform .3s}.more:hover{transform:translateX(4px)}
+.state{position:absolute;top:26px;right:26px;font-size:12px;font-weight:800;padding:6px 12px;border-radius:999px;background:#fff;color:var(--blue);opacity:0;transform:scale(.9);transition:.3s}
+.art{position:absolute;right:-16px;bottom:-16px;width:200px;opacity:.9;transition:transform .6s;pointer-events:none}.card:hover .art{transform:scale(1.08) rotate(-4deg)}
+.card.sel{background:linear-gradient(160deg,#4a7cf0,var(--blue-d));color:#fff;border-color:var(--blue-d);box-shadow:0 34px 56px -26px rgba(36,87,201,.7);transform:translateY(-4px)}
+.card.sel h3,.card.sel .more{color:#fff}.card.sel p{color:#e4edff}.card.sel .num{color:#cfe0ff}.card.sel .art{opacity:.4}.card.sel .state{opacity:1;transform:none}
+/* 7 Page sections */
+.pale{background:var(--sky);border-radius:60px;margin:0 20px}.pale-aqua{background:var(--aqua);border-radius:60px;margin:20px 20px 0}
+.hero{overflow-x:clip;padding:60px 0 120px;background:radial-gradient(900px 500px at 85% 20%,var(--aqua),transparent 70%),radial-gradient(500px 400px at 0 0,var(--lav),transparent 70%)}
+.hgrid{display:grid;grid-template-columns:1.12fr 1fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(36px,4.5vw,58px);font-weight:800;max-width:640px}
+.hero h1 em{font-style:normal;color:#2252c8;background:linear-gradient(transparent 64%,rgba(47,107,232,.2) 64%) no-repeat 0 0/0 100%;transition:background-size 1.3s .6s;padding:0 .08em;box-decoration-break:clone;-webkit-box-decoration-break:clone}.in h1 em{background-size:100% 100%}
+.hero .lead{margin-top:20px}.hero .ctas{margin-top:30px}
+.sup{display:flex;align-items:center;gap:12px;margin-top:30px;padding-top:22px;border-top:1px solid var(--line);color:var(--grey);font-weight:600;font-size:14px;max-width:520px}
+.sgrid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px}.sc1{grid-row:span 2;min-height:460px}
+.card:not(.sc1) .art{top:68px;bottom:auto;right:22px;width:84px}.card:not(.sc1) p{max-width:calc(100% - 100px)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.ag h3{font-size:20px;margin:28px 0 14px}
+.chk{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:12px;font-weight:600}.chk li{display:flex;gap:12px}.chk li:before{content:"✓";flex:none;width:24px;height:24px;border-radius:50%;background:var(--blue);color:#fff;font-size:13px;display:grid;place-items:center;margin-top:1px}
+.supl{margin:18px 0 0;font-weight:700;color:var(--tx)}
+.rep{background:#fff;border-radius:34px;padding:30px;box-shadow:0 40px 70px -30px rgba(20,40,75,.4);transform:rotate(2.5deg);transition:transform .5s;max-width:460px;margin:auto;width:100%}.rep:hover{transform:none}
+.rh{display:flex;justify-content:space-between;font-weight:700;font-size:13px;color:var(--grey);margin-bottom:18px}.score{display:flex;align-items:center;gap:22px;margin-bottom:22px}.score svg{width:110px;height:110px;flex:none}
+.rows{display:grid;gap:14px}.row{display:grid;gap:6px;font-size:13px;font-weight:700}.bar{height:8px;border-radius:9px;background:var(--sky);overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--blue),var(--teal));transition:width 1.4s .3s}.in .bar i{width:var(--w)}
+.rec{margin-top:18px;background:var(--sky);border-radius:16px;padding:14px;font-size:13px;font-weight:600}.note{font-size:12px;color:var(--grey);margin-top:16px}
+.dg{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.orbit{position:relative;aspect-ratio:1;max-width:520px;margin:auto;width:100%}.orbit .rg{position:absolute;border:2px dashed var(--line);border-radius:50%;animation:spin 60s linear infinite}.rg.r1{inset:0}.rg.r2{inset:16%;animation-direction:reverse}@keyframes spin{to{transform:rotate(360deg)}}
+.core{position:absolute;inset:34%;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));display:grid;place-items:center;color:#fff;font-weight:800;text-align:center;padding:10px;box-shadow:0 30px 60px -20px var(--blue)}
+.pt{position:absolute;background:#fff;border-radius:18px;padding:10px 16px;font-weight:700;font-size:12.5px;line-height:1.3;text-align:center;max-width:170px;box-shadow:0 12px 30px -14px rgba(20,40,75,.4);animation:float 7s ease-in-out infinite}
+.dl{list-style:none;padding:0;margin:34px 0 0;display:grid;gap:22px}.dl li{display:grid;grid-template-columns:54px 1fr;gap:18px}.dl b{font-size:20px;color:var(--tx);font-weight:800}.dl h3{font-size:19px;margin-bottom:4px}.dl p{margin:0;color:var(--grey);font-size:15px}
+/* How It Works: the earlier design (numbered circles on a dashed line, staggered middle step) */
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin:70px 0 56px;position:relative}
+.pg:before{content:"";position:absolute;top:44px;left:17%;right:17%;border-top:2px dashed var(--teal);opacity:.5}
+.st{text-align:center;position:relative}.st:nth-child(even){margin-top:46px}
+.dot{width:88px;height:88px;border-radius:50%;background:#fff;border:2px solid var(--line);display:grid;place-items:center;margin:0 auto 20px;font-weight:800;font-size:22px;color:var(--blue);transition:.4s}
+.st:hover .dot{background:var(--blue);color:#fff;transform:scale(1.08)}.st h3{font-size:19px;margin-bottom:8px}.st p{color:var(--grey);margin:0 auto;font-size:15px;max-width:290px}
+.par{background:var(--sky);padding:80px 0}.pl{display:grid;grid-template-columns:repeat(6,1fr);gap:18px;margin-top:40px}
+.pl div{background:#fff;border:1px solid var(--line);border-radius:22px;height:96px;display:grid;place-items:center;padding:12px;font-weight:800;font-size:19px;color:#44546a;transition:transform .3s,box-shadow .3s;text-align:center;line-height:1.1}.pl div:hover{transform:translateY(-5px);box-shadow:var(--sh)}
+.pl small{display:block;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.cta-band{margin:0 20px;border-radius:60px;background:linear-gradient(135deg,var(--navy),#1f4290 60%,var(--blue));color:#fff;text-align:center;overflow:hidden;padding:100px 24px;position:relative}
+.cta-band h2{color:#fff;max-width:800px;margin:0 auto 20px}.cta-band p{max-width:560px;margin:0 auto 34px;color:#dbe7ff;font-size:18px}.cta-band .ctas{justify-content:center}.cta-band>*{position:relative}
+.cta-band .o{position:absolute;border-radius:50%;background:rgba(255,255,255,.07);animation:float 9s ease-in-out infinite}.shield{display:block;margin:0 auto 24px;animation:float 6s ease-in-out infinite}
+/* 8 Footer */
+.site-footer{padding:90px 0 40px}.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}.site-footer h4{margin:0 0 16px;font-size:15px;color:var(--navy)}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px;color:var(--grey);font-size:15px}.site-footer li a:hover{color:var(--blue)}
+.fb{margin-top:60px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:var(--grey);font-size:14px}
+/* 9 Reveal */
+.rv{opacity:0;transform:translateY(30px);transition:opacity .9s,transform .9s}.rv.in{opacity:1;transform:none}
+/* 10 Responsive */
+@media(max-width:1140px){
+ .nav-cta{display:none}.burger{display:block}.menu .m-cta{display:block}
+ .menu{position:fixed;inset:80px 0 auto 0;flex-direction:column;align-items:stretch;gap:14px;background:#fff;padding:20px 24px 30px;border-bottom:1px solid var(--line);font-size:18px;max-height:calc(100vh - 80px);overflow:auto;transform:translateY(-130%);transition:transform .4s;z-index:-1}
+ .menu.open{transform:none}.mega{position:static;padding:0;opacity:1;visibility:visible;transform:none;display:none}.dd.open .mega{display:block}
+ .mega-in{grid-template-columns:1fr;border:0;box-shadow:none;padding:8px 0 0}.mega-col{padding:12px}
+}
+@media(max-width:980px){
+ section{padding:80px 0}.hgrid,.sgrid,.ag,.dg{grid-template-columns:1fr}.sc1{grid-row:auto;min-height:0}.stage{margin:10px auto 0;font-size:min(17px,calc((100vw - 48px)/30))}
+ .pg{grid-template-columns:1fr;gap:34px;margin:50px 0 40px}.pg:before{display:none}.st:nth-child(even){margin-top:0}.pale,.pale-aqua,.cta-band{border-radius:36px}
+ .pl{grid-template-columns:repeat(3,1fr)}.rep{transform:none}.fgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.fgrid{grid-template-columns:1fr}.btn{width:100%;justify-content:center}.pl{grid-template-columns:repeat(2,1fr)}.card{padding:28px}.pale,.pale-aqua,.cta-band{margin-inline:10px}
+ .c1{left:0}.c2{right:0}.pt{font-size:11px;padding:8px 12px;max-width:128px}.stage{font-size:clamp(9.5px,3.1vw,13px)}}
+/* 11 Reduced motion */
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.rv{opacity:1;transform:none}.bar i{width:var(--w)}.hero h1 em{background-size:100% 100%}.cloud{transform:rotateX(12deg) rotateY(-16deg)}.ring{transform:rotateX(74deg)}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div id="site-header"></div>
+<main id="main">
+
+<section class="hero"><div class="wrap hgrid">
+<div class="rv"><span class="eyebrow">CLOUD BACKUP · DISASTER RECOVERY · UK BUSINESSES</span>
+<h1>Your Business Data Deserves <em>a Backup Plan.</em></h1>
+<p class="lead">Protect important business data, prepare for unexpected disruption and understand how your organisation could recover.</p>
+<p class="lead" style="font-size:16px;margin-top:14px">[Brand Name] provides cloud backup and disaster recovery solutions for UK businesses, helping protect critical data across supported business systems.</p>
+<div class="ctas"><a class="btn btn-p" href="#assessment">Get Your Free Backup Assessment →</a><a class="btn btn-s" href="#services">Explore Our Services →</a></div>
+<div class="sup"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#17706B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>Practical data protection for the systems your business depends on.</div></div>
+
+<div class="stage rv" role="img" aria-label="A three-dimensional cloud with a security shield, floating above a ring of backup data">
+<div class="blob"></div>
+<div class="scene"><div class="tilt">
+<div class="ring"></div>
+<div class="cloud"><div class="layer front"><div class="puff base"></div><div class="puff p1"></div><div class="puff p2"></div><div class="puff p3"></div></div>
+<svg class="badge back" viewBox="-60 -70 120 140" aria-hidden="true"><defs><linearGradient id="sg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b92ff"/><stop offset="1" stop-color="#2457C9"/></linearGradient></defs><path d="M0-62 54-38v44c0 36-24 62-54 76-30-14-54-40-54-76v-44z" fill="url(#sg2)"/><path d="M-22 6l16 16 30-34" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg><svg class="badge" viewBox="-60 -70 120 140" aria-hidden="true"><defs><linearGradient id="sg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5b92ff"/><stop offset="1" stop-color="#2457C9"/></linearGradient></defs><path d="M0-62 54-38v44c0 36-24 62-54 76-30-14-54-40-54-76v-44z" fill="url(#sg)"/><path d="M-22 6l16 16 30-34" fill="none" stroke="#fff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<div class="shadow"></div></div></div>
+<div class="chip c1"><b>✓</b>Microsoft 365 protected</div><div class="chip c2"><b>↺</b>Recovery ready</div><div class="chip c3"><b>☁</b>Replicated offsite</div>
+</div>
+</div></section>
+
+<section class="pale" id="services"><div class="wrap">
+<div class="sec-head rv"><span class="eyebrow">WHAT CAN WE HELP YOU PROTECT?</span><h2>Backup Solutions for Your Business</h2><p class="lead">Different systems need different approaches to backup and recovery. Explore protection options for your business data, applications and infrastructure.</p></div>
+<div class="sgrid" data-select role="group" aria-label="Services">
+<article class="card sc1 rv"><span class="state" aria-hidden="true">Selected</span><span class="num">1</span><h3><button class="pick" type="button" aria-pressed="false">Cloud Backup</button></h3><p>Protect business data across supported environments, including Microsoft 365, endpoints, servers and cloud platforms.</p><a class="more" href="services/cloud-backup.html">Explore Cloud Backup →</a>
+<svg class="art" viewBox="0 0 200 160" aria-hidden="true"><circle cx="100" cy="90" r="80" fill="#E6F4F3"/><path d="M50 110a24 24 0 0 1 4-48 38 38 0 0 1 72-4 28 28 0 0 1 12 54z" fill="#2F6BE8"/></svg></article>
+<article class="card rv"><span class="state" aria-hidden="true">Selected</span><span class="num">2</span><h3><button class="pick" type="button" aria-pressed="false">Disaster Recovery</button></h3><p>Prepare for unexpected disruption with cloud replication and disaster recovery solutions designed to help restore business operations.</p><a class="more" href="services/draas.html">Explore Disaster Recovery →</a>
+<svg class="art" viewBox="0 0 200 160" aria-hidden="true"><path d="M40 80a60 60 0 1 1 18 42" fill="none" stroke="#2F6BE8" stroke-width="12" stroke-linecap="round" opacity=".5"/><path d="M30 60v30h30" fill="none" stroke="#2F6BE8" stroke-width="12" stroke-linecap="round"/></svg></article>
+<article class="card rv"><span class="state" aria-hidden="true">Selected</span><span class="num">3</span><h3><button class="pick" type="button" aria-pressed="false">Backup as a Service</button></h3><p>Explore managed backup services that help businesses simplify the protection, storage and management of their data.</p><p>Protect virtual and physical workloads with backup and replication options designed around your infrastructure.</p><a class="more" href="services/backup-as-a-service.html">Explore Server Backup and Replication →</a>
+<svg class="art" viewBox="0 0 200 160" aria-hidden="true"><g fill="#fff" stroke="#2F6BE8" stroke-width="6"><rect x="40" y="40" width="120" height="30" rx="10"/><rect x="40" y="82" width="120" height="30" rx="10"/><rect x="40" y="124" width="120" height="30" rx="10"/></g><g fill="#58AFA8"><circle cx="62" cy="55" r="5"/><circle cx="62" cy="97" r="5"/><circle cx="62" cy="139" r="5"/></g></svg></article>
+</div></div></section>
+
+<section class="pale-aqua" id="assessment"><div class="wrap ag">
+<div class="rv"><span class="eyebrow">FREE BACKUP ASSESSMENT</span><h2>Do You Know How Ready Your Business Is to Recover?</h2>
+<p class="lead" style="margin-top:22px">Your business may already have backups. But are they suitable for your needs?</p>
+<p class="lead" style="margin-top:14px">Our free backup assessment helps you review your current arrangements and understand where improvements may be worth considering.</p>
+<h3>Here's What You Get</h3>
+<ul class="chk"><li>Simple questions about your business and existing backups</li><li>A personalised report delivered by email</li><li>Potential gaps and areas to review</li><li>Practical next steps based on your responses</li></ul>
+<p style="color:var(--grey);margin:0 0 28px">No specialist technical knowledge is required to complete the assessment.</p>
+<a class="btn btn-p" href="#contact">Get Your Free Backup Assessment →</a><p class="supl">Simple questions. Personalised insights. No cost to take part.</p></div>
+<div class="rep rv"><div class="rh"><span>Backup Assessment Report</span><span>Sample layout</span></div>
+<div class="score"><svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="#EEF5FC" stroke-width="14"/><circle cx="60" cy="60" r="50" fill="none" stroke="#58AFA8" stroke-width="14" stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="90" transform="rotate(-90 60 60)"/><text x="60" y="66" text-anchor="middle" font-size="20" font-weight="800" fill="#14284B" font-family="Manrope">Score</text></svg>
+<div><b style="font-size:19px">Your protection overview</b><div style="color:var(--grey);font-size:13px">Example only, not real results</div></div></div>
+<div class="rows"><div class="row">Microsoft 365 coverage<div class="bar"><i style="--w:78%"></i></div></div><div class="row">Device backup<div class="bar"><i style="--w:55%"></i></div></div><div class="row">Recovery readiness<div class="bar"><i style="--w:40%"></i></div></div></div>
+<div class="rec">Recommended next steps appear here, tailored to your business.</div><div class="note">Illustrative sample. Your report is personalised to your environment.</div></div>
+</div></section>
+
+<section id="why"><div class="wrap dg">
+<div class="orbit rv"><div class="rg r1"></div><div class="rg r2"></div><div class="core">[Brand Name]</div>
+<span class="pt" style="top:2%;left:28%">Built Around Your Business</span><span class="pt" style="top:30%;right:-2%;animation-delay:-1s">Veeam-Compatible Solutions</span><span class="pt" style="bottom:10%;right:2%;animation-delay:-2s">Recovery Is Part of the Plan</span><span class="pt" style="bottom:4%;left:6%;animation-delay:-3s">UK-Owned and Operated</span><span class="pt" style="top:34%;left:-4%;animation-delay:-4s">Experienced People, Practical Support</span></div>
+<div class="rv"><span class="eyebrow">WHY [BRAND NAME]?</span><h2>A More Practical Approach to Business Data Protection</h2>
+<ul class="dl"><li><b>01</b><div><h3>Built Around Your Business</h3><p>Explore backup and recovery options based on your systems, priorities and business requirements.</p></div></li>
+<li><b>02</b><div><h3>Veeam-Compatible Solutions</h3><p>Access backup and replication options designed for supported Veeam environments.</p></div></li>
+<li><b>03</b><div><h3>Recovery Is Part of the Plan</h3><p>Consider not only how your data is backed up, but also how it can be restored when you need it.</p></div></li>
+<li><b>04</b><div><h3>UK-Owned and Operated</h3><p>A UK-owned and operated business focused on supporting UK organisations.</p></div></li>
+<li><b>05</b><div><h3>Experienced People, Practical Support</h3><p>Work with professionals who can help you understand your options and make informed decisions about backup and recovery.</p></div></li></ul></div>
+</div></section>
+
+<section id="how"><div class="wrap">
+<div class="center rv"><span class="eyebrow">A CLEARER ROUTE TO BACKUP READINESS</span><h2>How It Works</h2></div>
+<div class="pg">
+<div class="st rv"><div class="dot">01</div><h3>Understand Your Requirements</h3><p>Tell us about your business, the systems you use and your current backup arrangements.</p></div>
+<div class="st rv"><div class="dot">02</div><h3>Explore Your Options</h3><p>Review suitable backup and recovery approaches based on your environment and priorities.</p></div>
+<div class="st rv"><div class="dot">03</div><h3>Plan for Protection and Recovery</h3><p>Identify practical next steps to strengthen your data protection arrangements and prepare for recovery.</p></div></div>
+<div class="center rv"><a class="btn btn-p" href="#assessment">Get Your Free Backup Assessment →</a></div>
+</div></section>
+
+<section class="par" id="partners"><div class="wrap rv center"><span class="eyebrow">PARTNERS</span><h2 style="font-size:clamp(28px,3.4vw,40px)">Industry-Leading Technology</h2>
+<!-- Brands listed in the Partners block on pacificinfotech.co.uk. Swap each wordmark for the official logo file from the brand's partner/press kit. -->
+<div class="pl" role="list"><div role="listitem">Veeam</div><div role="listitem">Fortinet</div><div role="listitem">Dell<small>Technologies</small></div><div role="listitem">HP</div><div role="listitem">Cisco</div><div role="listitem">Meraki<small>Cisco</small></div></div></div></section>
+
+<section id="contact" style="padding-top:40px"><div class="cta-band rv"><span class="o" style="width:260px;height:260px;top:-80px;left:-60px"></span><span class="o" style="width:180px;height:180px;bottom:-50px;right:8%;animation-delay:-3s"></span>
+<svg class="shield" width="72" height="80" viewBox="-60 -70 120 140" aria-hidden="true"><path d="M0-62 54-38v44c0 36-24 62-54 76-30-14-54-40-54-76v-44z" fill="#fff" fill-opacity=".14" stroke="#fff" stroke-width="4"/><path d="M-22 6l16 16 30-34" fill="none" stroke="#FFC83D" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<h2>Start With a Clearer Picture of Your Backup Readiness.</h2><p>Understand your current backup arrangements and identify practical areas to review.</p>
+<div class="ctas"><a class="btn btn-y" href="#assessment">Get Your Free Backup Assessment →</a><a class="btn btn-o" href="mailto:[Business Email]">Talk to Our Team →</a></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script>/* [Brand Name] shared behaviour: header + footer, mega menu, reveal, card select, 3D cloud. */
+(()=>{
+const NAV=[['Home','#top'],['Why Us','#why'],['Resources','resources.html'],['About Us','about-us.html'],['Pricing','pricing.html'],['Contact','#contact']];
+const MEGA=[['Cloud Backup',[['Cloud Backup','services/cloud-backup.html'],['Microsoft 365 Backup','microsoft-365-backup.html'],['Endpoint Cloud Backup','services/endpoint-cloud-backup.html'],['Microsoft Entra ID Backup','services/microsoft-entra-id-backup.html'],['Google Cloud Backup','services/google-cloud-backup.html'],['Microsoft Azure Backup','services/microsoft-azure-backup.html']]],
+['Disaster Recovery',[['Cloud Replication','services/cloud-replication.html'],['Disaster Recovery as a Service (DRaaS)','services/draas.html']]],
+['Backup as a Service',[['Backup as a Service (BaaS)','services/backup-as-a-service.html']]]];
+const li=a=>`<li><a href="${a[1]}">${a[0]}</a></li>`;
+const caret='<svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4l4 4 4-4"/></svg>';
+const header=`<header class="site-header" id="hd"><div class="wrap nav"><a class="logo" href="index.html"><i></i>[Brand Name]</a>
+<nav aria-label="Main"><ul class="menu" id="menu">${li(NAV[0])}
+<li class="dd" id="dd"><button class="dd-btn" type="button" aria-expanded="false" aria-controls="mega">Services ${caret}</button>
+<div class="mega" id="mega"><div class="mega-in">${MEGA.map(([h,l])=>`<div class="mega-col"><h3>${h}</h3><ul>${l.map(li).join('')}</ul></div>`).join('')}</div></div></li>
+${NAV.slice(1).map(li).join('')}<li class="m-cta"><a class="btn btn-p" href="#assessment">Get Your Free Backup Assessment</a></li></ul></nav>
+<a class="btn btn-p nav-cta" href="#assessment">Get Your Free Backup Assessment</a>
+<button class="burger" id="bg" type="button" aria-label="Open menu" aria-expanded="false"><span></span><span></span></button></div></header>`;
+const footer=`<footer class="site-footer"><div class="wrap"><div class="fgrid"><div><a class="logo" href="index.html"><i></i>[Brand Name]</a><p style="color:var(--grey);max-width:300px">Cloud backup and disaster recovery solutions for UK businesses.</p></div>
+<div><h4>Explore</h4><ul><li><a href="services/cloud-backup.html">Cloud Backup</a></li><li><a href="services/draas.html">Disaster Recovery</a></li><li><a href="services/backup-as-a-service.html">Backup as a Service</a></li><li><a href="backup-strategy.html">Backup Strategy</a></li></ul></div>
+<div><h4>Company</h4><ul><li><a href="about-us.html">About Us</a></li><li><a href="resources.html">Resources</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+<div><h4>Contact</h4><ul><li>[Business Email]</li><li>[Business Phone]</li><li><a href="#">LinkedIn</a></li></ul></div></div>
+<div class="fb"><span>© [Year] [Brand Name]. All rights reserved.</span><span><a href="privacy-policy.html">Privacy Policy</a> | <a href="cookie-policy.html">Cookie Policy</a></span></div></div></footer>`;
+document.getElementById('site-header').outerHTML=header;document.getElementById('site-footer').outerHTML=footer;
+
+const $=s=>document.querySelector(s),hd=$('#hd'),menu=$('#menu'),bg=$('#bg'),dd=$('#dd'),btn=dd.querySelector('.dd-btn');
+const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches,hover=matchMedia('(hover:hover) and (min-width:1141px)');
+addEventListener('scroll',()=>hd.classList.toggle('sc',scrollY>10),{passive:true});
+bg.onclick=()=>{const o=menu.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');bg.setAttribute('aria-expanded',false)}));
+/* Mega menu: hover (with short close delay), click/tap, keyboard (Enter/Space, Esc, focus leaving) */
+let t;const set=o=>{dd.classList.toggle('open',o);btn.setAttribute('aria-expanded',o)};
+btn.onclick=()=>set(!dd.classList.contains('open'));
+dd.addEventListener('mouseenter',()=>{if(hover.matches){clearTimeout(t);set(true)}});
+dd.addEventListener('mouseleave',()=>{if(hover.matches)t=setTimeout(()=>set(false),180)});
+dd.addEventListener('focusout',e=>{if(!dd.contains(e.relatedTarget))set(false)});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&dd.classList.contains('open')){set(false);btn.focus()}});
+document.addEventListener('click',e=>{if(!dd.contains(e.target))set(false)});
+/* Current page marker */
+const here=location.pathname.split('/').pop()||'#top';menu.querySelectorAll('a').forEach(a=>{if(a.getAttribute('href')===here)a.setAttribute('aria-current','page')});
+/* Scroll reveal */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+/* Single-select cards */
+document.querySelectorAll('[data-select]').forEach(g=>{const cs=[...g.querySelectorAll('.card')];
+cs.forEach(c=>c.querySelector('.pick').addEventListener('click',()=>{const on=!c.classList.contains('sel');
+cs.forEach(k=>{k.classList.remove('sel');k.querySelector('.pick').setAttribute('aria-pressed','false')});
+if(on){c.classList.add('sel');c.querySelector('.pick').setAttribute('aria-pressed','true')}}))});
+/* 3D cloud: clone the front layer into stacked depth layers, add pointer tilt */
+document.querySelectorAll('.stage').forEach(st=>{const cloud=st.querySelector('.cloud'),front=cloud&&cloud.querySelector('.layer.front');if(!front)return;
+for(let i=0;i<7;i++){const l=front.cloneNode(true);l.classList.remove('front');l.setAttribute('aria-hidden','true');l.style.setProperty('--z',(-3+i*.85).toFixed(2)+'em');l.style.setProperty('--b',(.78+i*.03).toFixed(2));cloud.insertBefore(l,front)}
+front.style.setProperty('--z','3em');
+const tilt=st.querySelector('.tilt');if(!reduce&&tilt&&matchMedia('(hover:hover)').matches){
+st.addEventListener('pointermove',e=>{const r=st.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;tilt.style.transform=`rotateY(${x*14}deg) rotateX(${-y*10}deg)`});
+st.addEventListener('pointerleave',()=>tilt.style.transform='')}});
+})();
+</script>
+</body>
+</html>
